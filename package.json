@@ -1,0 +1,19 @@
+{
+  "name": "my-hair-guide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MYHG/my-hair-guide.git",
+  "author": "Sandra Okoli & Bukola Thompson",
+  "license": "MIT",
+  "scripts": {
+    "server": "nodemon --config ./config/nodemon.json"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "morgan": "^1.9.1"
+  }
+}
