@@ -1,28 +1,26 @@
 const express = require('express');
-const app = express();
+const router = express.Router();
 
-app.get('/', (req, res) => {
-    res.send('GET Homepage');
-    req.body();
-    console.log(req.body, "Welcome to my hair-guide");
+router.get('/', (req, res) => {
+    res.send('Welcome to my hair guide')
 });
 
-app.get('/register', (req, res) => {
+router.get('/register', (req, res) => {
     res.send('GET Registeration');
 });
 
-app.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
     res.send('GET Login');
 });
 
-app.get('/products', (req, res) => {
+router.get('/products', (req, res) => {
     res.send('GET products');
 });
 
-app.post('/register', (req, res) => {
+router.post('/register', (req, res) => {
     res.send('GET Registration');
 });
 
 
-
+module.exports = router;
 
