@@ -15,17 +15,14 @@ app.get('/login', (req, res) => {
     res.send('GET Login');
 });
 
-app.post('/', (req,res) => {
-    res.send('POST Homepage')
-})
+app.get('/products', (req, res) => {
+    res.send('GET products');
+});
 
 app.post('/register', (req, res) => {
     res.send('GET Registration');
 });
 
-app.get('/products', (req, res) => {
-    res.send('GET products');
-});
 
 
 
