@@ -1,0 +1,36 @@
+[{
+		"firstName": "Sandra",
+		"lastName": "Okoli",
+		"emailAddress": "sandra@mhg.co.uk",
+		"password": "password",
+		"age": 27,
+		"hairQuizResponses": [{
+			"texture": {
+				"chemicallyProcessed": true
+			},
+			"hairProblems": {
+				"limpHair": true,
+				"breakage": true,
+				"heatDamage": true,
+				"splitEnds": true
+			}
+		}]
+	},
+	{
+		"firstName": "Buki",
+		"lastName": "Thompson",
+		"emailAddress": "buki@mhg.co.uk",
+		"password": "password1",
+		"age": 28,
+		"hairQuizResponses": [{
+			"texture": {
+				"natural": true
+			},
+			"hairProblems": {
+				"dry": true,
+				"breakage": true,
+				"thinningEdges": true
+			}
+		}]
+	}
+]
