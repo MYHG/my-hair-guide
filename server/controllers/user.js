@@ -1,6 +1,4 @@
 const User = require('../api/models/user');
-const HairQuiz = require('../api/models/hairQuiz');
-
 
 function createUser(req, res) {
     User.create(req.body)
@@ -22,7 +20,7 @@ function showUser(req, res) {
     .catch(() => {
         res.status(500).json({
             success: false,
-            message: "Can't find user account"
+            message: "User account does not exist"
         })
     })
 }
