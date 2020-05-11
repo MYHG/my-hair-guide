@@ -1,3 +1,5 @@
 # my-hair-guide
 
-testing push/pull
+1. To start the server use 'yarn setup'
+2. Go to 'localhost:3000'
+
