@@ -1,7 +1,7 @@
 const express = require("express");
 const { port, databaseURL, env } = require("./server/config/env");
 const morgan = require("morgan");
-const routes = require("./server/config/routes");
+const routes = require("./server/config/routes/user");
 const mongoose = require("mongoose");
 
 const app = express();
