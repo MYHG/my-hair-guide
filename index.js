@@ -19,7 +19,7 @@ mongoose.connect(databaseURL, { useNewUrlParser: true })
 
     })
     .catch((error) => {
-        console.log('Error connecting to database');
+        console.log(error);
     });
   
 app.get('/*', (req, res) => res.sendFile(__dirname + '/public/index.html'));
