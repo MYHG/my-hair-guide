@@ -5,42 +5,57 @@ mongoose.Promise = global.Promise;
 
 const hairQuizSchema = new mongoose.Schema({
   texture: {
+    question: { type: String },
     description: { type: String },
-    natural: { type: Boolean },
-    chemicallyProcessed: { type: Boolean },
-    transitioning: { type: Boolean },
+    answers: [{
+      natural: { type: Boolean },
+      chemicallyProcessed: { type: Boolean },
+      transitioning: { type: Boolean },
+    }],
   },
   porosity: {
+    question: { type: String },
     description: { type: String },
-    low: { type: Boolean },
-    normal: { type: Boolean },
-    high: { type: Boolean },
+    answers: [{
+      low: { type: Boolean },
+      normal: { type: Boolean },
+      high: { type: Boolean },
+    }],
   },
   thickness: {
+    question: { type: String },
     description: { type: String },
-    thin: { type: Boolean },
-    thick: { type: Boolean },
+    answers: [{
+      thin: { type: Boolean },
+      thick: { type: Boolean },
+    }],
   },
-  response: {
+  moisture: {
+    question: { type: String },
     description: { type: String },
-    oneToTwo: { type: Boolean },
-    twoToThree: { type: Boolean },
-    fourToFive: { type: Boolean },
-    onceAWeek: { type: Boolean },
+    answers: [{
+      oneToTwo: { type: Boolean },
+      twoToThree: { type: Boolean },
+      fourToFive: { type: Boolean },
+      onceAWeek: { type: Boolean },
+    }],
   },
   hairProblems: {
+    question: { type: String },
     description: { type: String },
-    dry: { type: Boolean },
-    breakage: { type: Boolean },
-    thinningEdges: { type: Boolean },
-    splitEnds: { type: Boolean },
-    excessiveDandruff: { type: Boolean },
-    tangling: { type: Boolean },
-    heatDamage: { type: Boolean },
-    limpHair: { type: Boolean },
-    frizzy: { type: Boolean },
-    colourMaintenance: { type: Boolean },
-    curlDefinition: { type: Boolean },
+    answers: [{
+      dry: { type: Boolean },
+      breakage: { type: Boolean },
+      thinningEdges: { type: Boolean },
+      splitEnds: { type: Boolean },
+      excessiveDandruff: { type: Boolean },
+      tangling: { type: Boolean },
+      heatDamage: { type: Boolean },
+      limpHair: { type: Boolean },
+      frizzy: { type: Boolean },
+      colourMaintenance: { type: Boolean },
+      curlDefinition: { type: Boolean },
+    }],
   },
 });
 
@@ -70,5 +85,5 @@ const userSchema = new mongoose.Schema({
 });
 
 
-userSchema.plugin(uniqueValidator, { message: 'already exists.'});
+userSchema.plugin(uniqueValidator, { message: 'already exists.' });
 module.exports = mongoose.model('User', userSchema);
