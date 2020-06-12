@@ -10,7 +10,11 @@ router.route('/hair-quiz/:id')
   .post(users.createEntry);
 
 router.route('/user/:id')
-  .get(users.show)
+  .get(users.find)
   .get(users.createEntry);
+
+router.route('/products/:id')
+  .get(users.products);
+
 
 module.exports = router;
